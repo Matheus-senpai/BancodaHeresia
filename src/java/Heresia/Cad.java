@@ -25,13 +25,15 @@ import javax.servlet.http.HttpServletResponse;
 public class Cad extends HttpServlet {
 
     private PreparedStatement ps = null;
-    private ResultSet rs = null;
-    private Connect con = new Connect();
-    private  Connection conexao;
+    private final ResultSet rs = null;
+    private final Connect Driver = new Connect();
+    private final  Connection getConnection;
+    
+     
     
     
 public Cad() throws SQLException, ClassNotFoundException{
-    this.conexao = con.getConnection();
+    this.getConnection = Connect.getConnection();
 }
     
     
@@ -41,15 +43,18 @@ public Cad() throws SQLException, ClassNotFoundException{
        
             request.setCharacterEncoding("UTF8");
             response.setContentType("html");
- 
-            Conta c = new Conta();
-            c.setCPF(request.getParameter(""));
-            c.setNumConta(request.getParameter(""));
            
-            String sql = "INSERT INTO ` Conta` (`idContaCorrente`, `NumeroConta`, `CPF`) "
-                    + "VALUES (NULL, '" + c.getNumConta()+ "', '" + c.getCPF() + "')";
-        try {
-            ps = conexao.prepareStatement(sql);
+            Conta c = new Conta();
+            c.setCPF(request.getParameter("CPF"));
+            c.setNumConta(request.getParameter("NumConta"));
+            
+             Connection con = Connect.getConnection();
+            
+           try { 
+            String sql = ("INSERT INTO  Conta (idContaCorrente, NumeroConta, CPF) "
+                    + "VALUES (NULL, '" + c.getNumConta()+ "', '" + c.getCPF() + "')");
+       
+            ps = con.prepareStatement(sql);
             ps.execute(sql);
             ps.close();
             PrintWriter out = response.getWriter();  
@@ -65,7 +70,5 @@ public Cad() throws SQLException, ClassNotFoundException{
 
     }
 
-    Connection getConnection() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    
     }
-}

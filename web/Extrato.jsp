@@ -11,7 +11,7 @@
         <a>Cad conta</a>
         <a>Fazer operação</a>
         
-        <form   action="/banco/historico" method="post" class="form-vertical">
+        <form   action="/BancoHeresia/Extrato" method="post" class="form-vertical">
 <fieldset>
 
 
@@ -19,9 +19,9 @@
 
 
 <div class="form-group">
-  <label class="col-md-4 control-label" for="conta">Conta</label>  
+  <label class="col-md-4 control-label" for="Conta">Conta</label>  
   <div class="col-md-4">
-  <input id="conta" name="conta" type="text" placeholder="" class="form-control input-md" required="">
+  <input id="conta" name="Conta" type="text" placeholder="" class="form-control input-md" required="">
     
   </div>
 </div>

@@ -11,11 +11,11 @@
         <a>Cad conta</a>
         <a>Fazer operação</a>
      
-<form action="/banco/operação" method="post" class="form-vertical">
+<form action="/BancoHeresia/operation" method="post" class="form-vertical">
 <fieldset>
 <legend>Cadconta</legend>
 <div class="form-group">
-  <label class="col-md-4 control-label" for="conta">Conta</label>  
+  <label class="col-md-4 control-label" for="Conta">Conta</label>  
   <div class="col-md-4">
   <input id="conta" name="conta" type="text" placeholder="" class="form-control input-md" required="">
     
@@ -26,7 +26,7 @@
   <label class="col-md-4 control-label" for="valor">Valor</label>  
   <div class="col-md-4">
   <input id="valor" name="valor" type="text" placeholder="" class="form-control input-md" required="">
-  <span class="help-block">help</span>  
+  <span class="help-block"></span>  
   </div>
   
 </div>
@@ -34,7 +34,7 @@
   <label class="col-md-4 control-label" for="data">Data</label>  
   <div class="col-md-4">
   <input id="data" name="data" type="text" placeholder="" class="form-control input-md" required="">
-  <span class="help-block">help</span>  
+  <span class="help-block"></span>  
   </div>
   
 </div>
@@ -42,7 +42,7 @@
   <label class="col-md-4 control-label" for="cpf">Cpf</label>  
   <div class="col-md-4">
   <input id="cpf" name="cpf" type="text" placeholder="" class="form-control input-md" required="">
-  <span class="help-block">help</span>  
+  <span class="help-block"></span>  
   </div>
   
 </div>

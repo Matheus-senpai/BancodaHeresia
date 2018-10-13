@@ -20,7 +20,7 @@ import java.util.logging.Logger;
 public class Connect {
 
     private static final String DRIVER = "com.mysql.jdbc.Driver";
-    private static final String URL = "jdbc:mysql://localhost/BancoHeresia";
+    private static final String URL = "jdbc:mysql://localhost/bancoheresia";
     private static final String USER = "root";
     private static final String PASS = "";
 
@@ -32,45 +32,6 @@ public class Connect {
             throw new RuntimeException("Erro na conexão: ", ex);
         }
     }
-
-    public static void closeConnection(Connection con) {
-        try {
-            if (con != null) {
-                con.close();
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(Connect.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        
     }
-
-    public static void closeConnection(Connection con, PreparedStatement stmt) {
-
-        closeConnection(con);
-
-        try {
-
-            if (stmt != null) {
-                stmt.close();
-            }
-
-        } catch (SQLException ex) {
-            Logger.getLogger(Connect.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-
-    public static void closeConnection(Connection con, PreparedStatement stmt, ResultSet rs) {
-
-        closeConnection(con, stmt);
-
-        try {
-
-            if (rs != null) {
-                rs.close();
-            }
-
-        } catch (SQLException ex) {
-            Logger.getLogger(Connect.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-
-}
+      

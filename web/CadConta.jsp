@@ -11,7 +11,7 @@
         <a>Cad conta</a>
         <a> Fazer Operação</a>
         
-        <form   action="/banco/cadastro" method="post" class="form-vertical">
+        <form   action="/BancodaHeresia/Cad" method="post" class="form-horizontal">
 <fieldset>
 
 
@@ -19,9 +19,9 @@
 
 
 <div class="form-group">
-  <label class="col-md-4 control-label" for="conta">Conta</label>  
+  <label class="col-md-4 control-label" for="NumConta">Conta</label>  
   <div class="col-md-4">
-  <input id="conta" name="conta" type="text" placeholder="" class="form-control input-md" required="">
+  <input id="conta" name="NumConta" type="text" placeholder="" class="form-control input-md" required="">
     
   </div>
 </div>
@@ -30,9 +30,9 @@
 
 
 <div class="form-group">
-  <label class="col-md-4 control-label" for="cpf">CPF</label>  
+  <label class="col-md-4 control-label" for="CPF">CPF</label>  
   <div class="col-md-4">
-  <input id="cpf" name="cpf" type="text" placeholder="" class="form-control input-md" required="">
+  <input id="cpf" name="CPF" type="text" placeholder="" class="form-control input-md" required="">
  
   </div>
 </div>
